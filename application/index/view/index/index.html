@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body>
+		<table border='1' width='60%' align='center'>
+		<tr>
+			<th>ID</th>
+			<th>name</th>
+			<th>SEX</th>
+		</tr>
+
+		{volist name="data" id="vo"}
+		<tr>
+			<td>{$vo.id}</td>
+			<td>{$vo.name}</td>
+			<td>{if $vo.sex==1}男{else/}女{/if}</td>
+		</tr>
+		{/volist}
+			
+		</table>
+</body>
+	<script>
+		$.post('{:url("qingqiu")}');
+	</script>
+</html>
